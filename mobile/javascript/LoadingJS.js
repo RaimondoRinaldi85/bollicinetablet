@@ -28,9 +28,6 @@ LoadingJS.prototype = {
 		this.image = document.createElement("img");
 		this.image.src = this.loadingPicture;
 		this.title = document.createElement("p");
-		this.copyright = document.createElement("p");
-		this.copyright.setAttribute("style", "position:absolute;bottom:5%;font-size:1.1rem;width:100%;text-align:center;");
-		if(window.userInfo && window.userInfo.copyright) this.copyright.innerHTML = window.userInfo.copyright;
 
 		this.bg = document.createElement("div");
 		this.bg.setAttribute("style", "transform:scale(1);");
@@ -40,7 +37,6 @@ LoadingJS.prototype = {
 		this.initAnimationHtml();
 
 		this.instance.appendChild(this.title);
-		this.instance.appendChild(this.copyright);
 		this.bg.appendChild(this.instance);
 		document.body.appendChild(this.bg);
 	},
@@ -251,7 +247,7 @@ LoadingJS.prototype = {
 		// }
 
 		this.title.setAttribute("style", (
-			"font-family:Arial,Helvetica,sans serif;" +
+			"font-family:Helvetica,Arial,sans serif;" +
 		  "font-size : 28px;" +
 		  "position : absolute;" +
 		  "top : 50%;" +
